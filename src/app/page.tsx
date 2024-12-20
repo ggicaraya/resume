@@ -1,8 +1,6 @@
 "use client"
 
 import FirstFoldSection from "@/modules/firstFoldSection"
-import ResumeSection from "@/modules/resumeSection"
-import FooterSection from "@/modules/footerSection"
 import React, { useState, useEffect } from 'react';
 
 export default function Page() {
@@ -38,9 +36,7 @@ export default function Page() {
   }, []);
   return (
     <>
-      <FirstFoldSection className={activeSection === 0 ? 'active' : ''} />
-      <ResumeSection className={activeSection === 1 ? 'active' : ''} />
-      <FooterSection className={activeSection === 2 ? 'active' : ''} />
+      <FirstFoldSection className={activeSection === 0 ? 'active' : ''}/>
     </>
   )
 }

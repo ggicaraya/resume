@@ -2,7 +2,7 @@ import React from 'react';
 
 const PulsatingArrows = () => {
   return (
-    <a href="#resumeSectionWrapper" className="flex flex-col justify-center items-center gap-1">
+    <a href="/resume" className="flex flex-col justify-center items-center gap-1">
       <div className="animate-bounce">
         <svg
           xmlns="http://www.w3.org/2000/svg"
