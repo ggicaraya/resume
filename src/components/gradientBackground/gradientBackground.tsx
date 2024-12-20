@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect, ReactNode } from "react";
 import "@/utils/gradientBackground.css";
 import { cn } from "@/utils/classMerge";
@@ -5,9 +6,12 @@ import { cn } from "@/utils/classMerge";
 interface GradientBackgroundProps {
   children: ReactNode;
   className?: string
+  colorOne: string
+  colorTwo: string
+  colorThree: string
 }
 
-const GradientBackground: React.FC<GradientBackgroundProps> = ({ children, className }) => {
+const GradientBackground: React.FC<GradientBackgroundProps> = ({ children, className, colorOne, colorTwo, colorThree }) => {
   const gradientRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -20,9 +24,9 @@ const GradientBackground: React.FC<GradientBackgroundProps> = ({ children, class
 
       gradientRef.current.style.background = `
         radial-gradient(circle at ${x}px ${y}px, 
-        #232E30, #0E161B, #162022)`;
+        ${colorOne}, ${colorTwo}, ${colorThree})`;
     };
-
+    // #232E30, #0E161B, #162022
     const gradientElement = gradientRef.current;
     gradientElement?.addEventListener("mousemove", handleMouseMove);
 

@@ -11,7 +11,12 @@ interface FirstFoldSectionProps {
 const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
   return (
     <div className={cn(`section firstFoldSection ${className}`)}>
-      <GradientBackground className="px-6 lg:px-10 relative">
+      <GradientBackground 
+        className="px-6 lg:px-10 relative"
+        colorOne="#232E30"
+        colorTwo="#0E161B"
+        colorThree="#162022"
+      >
         <div className="absolute inset-0">
           <Image
             alt="Gian Paolo Gicaraya's Resume"
@@ -29,7 +34,7 @@ const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
           <div>
             <div className="flex justify-end relative z-10 -mr-2 sm:mr-0 -mt-5">
               <div className="flex gap-3 flex-col sm:flex-row">
-                <a href="https://m.me/gian.gicaraya?hash=AbZ3qt91NOnxS25j&source=qr_link_share" className="p-1 md:p-2 rounded-full border-white border md:border-2">
+                <a href="https://m.me/gian.gicaraya?hash=AbZ3qt91NOnxS25j&source=qr_link_share" target="_blank" className="p-1 md:p-2 rounded-full border-white border md:border-2">
                   <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" className="w-3 sm:w-6 h-3 sm:h-6">
                     <g stroke="none" strokeWidth="1" fill="currentColor" fillRule="evenodd">
                       <g id="Social-Icons---Isolated" transform="translate(-276.000000, -1287.000000)" fill="currentColor">
@@ -38,7 +43,7 @@ const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
                     </g>
                   </svg>
                 </a>
-                <a href="https://m.me/gian.gicaraya?hash=AbZ3qt91NOnxS25j&source=qr_link_share" className="p-1 md:p-2 rounded-full border-white border md:border-2">
+                <a href="tel:+639279022504" target="_blank" className="p-1 md:p-2 rounded-full border-white border md:border-2">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-3 sm:w-6 h-3 sm:h-6" strokeLinejoin="round">
                     <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                     </path>
