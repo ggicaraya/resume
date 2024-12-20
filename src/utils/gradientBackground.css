@@ -1,0 +1,15 @@
+.radial-gradient-container {
+  height: 100%; /* Adjust as needed, e.g., 400px */
+  width: 100%; /* Full width or adjust as needed */
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle, #232E30, #0E161B, #162022);
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  flex-direction: column;
+}
