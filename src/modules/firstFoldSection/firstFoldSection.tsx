@@ -73,14 +73,14 @@ const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
             </div>
           </div>
 
-          <div className="">
+          <div>
             <div className="chat chat-start">
               <div className="chat-bubble shadow-lg bg-[#1E3A8A] text-white text-left">
-                Hi there! I'm Gian Paolo Gicaraya, a versatile front-end web developer who thrives on tackling challenges head-on.
+                Hi there! I&apos;m Gian Paolo Gicaraya, a versatile front-end web developer who thrives on tackling challenges head-on.
               </div>
             </div>
             <div className="chat chat-start">
-              <div className="chat-bubble shadow-lg bg-[#1E3A8A] text-white text-left">Quick to adapt, eager to learn—let’s create something amazing together!</div>
+              <div className="chat-bubble shadow-lg bg-[#1E3A8A] text-white text-left">Quick to adapt, eager to learn—let&apos;s create something amazing together!</div>
             </div>
           </div>
 
