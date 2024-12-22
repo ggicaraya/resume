@@ -1,8 +1,14 @@
-import React from 'react';
+import Link from 'next/link';
+import React, { useEffect } from 'react';
 
-const PulsatingArrows = () => {
+interface PulsatingArrowProps {
+  link?: string
+}
+
+const PulsatingArrows:React.FC<PulsatingArrowProps> = ({link = "#"}) => {
+
   return (
-    <a href="/resume" className="flex flex-col justify-center items-center gap-1">
+    <Link href={link} className="flex flex-col justify-center items-center gap-1">
       <div className="animate-bounce">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +57,7 @@ const PulsatingArrows = () => {
           />
         </svg>
       </div>
-    </a>
+    </Link>
   );
 };
 
