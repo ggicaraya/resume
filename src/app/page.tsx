@@ -1,7 +1,10 @@
 "use client"
-
-import FirstFoldSection from "@/modules/firstFoldSection"
 import React, { useState, useEffect } from 'react';
+import FirstFoldSection from "@/modules/firstFoldSection"
+import FloatingButton from "@/components/floatingButton";
+import SecondFoldSection from "@/modules/secondFoldSection";
+import ThirdFoldSection from "@/modules/thirdFoldSection";
+import FourthFoldSection from "@/modules/fourthFoldSection";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
@@ -37,6 +40,10 @@ export default function Page() {
   return (
     <>
       <FirstFoldSection className={activeSection === 0 ? 'active' : ''}/>
+      <SecondFoldSection className={activeSection === 1 ? 'active' : ''}/>
+      <ThirdFoldSection className={activeSection === 2 ? 'active' : ''}/>
+      <FourthFoldSection className={activeSection === 3 ? 'active' : ''}/>
+      <FloatingButton />
     </>
   )
 }

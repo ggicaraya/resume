@@ -30,12 +30,29 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({ className }) => {
 
   return (
     <>
-      <div id="resumeSectionWrapper" className={cn(`py-20 px-6 md:px-10 resumeSection ${className}`)}>
-        <div className="mb-20 max-w-5xl mx-auto">
+      <div id="resumeSectionWrapper" className={cn(`py-20 relative px-6 md:px-10 resumeSection ${className}`)}>
+        <div className="absolute inset-0">
+          <Image
+            alt="Gian Paolo Gicaraya's Resume"
+            fill
+            className="object-cover w-full h-full border-8 mx-auto opacity-50"
+            src="/images/concrete-wall.png"
+            unoptimized
+            loading="lazy"
+          />
+        </div>
+        <div className="mb-20 max-w-5xl mx-auto flex justify-between">
           <Link href="/" className=" border-full border p-2 border-black w-auto inline-block rounded-full">
             <span className="animate-bounce">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </span>
+          </Link>
+          <Link href="/files/Gicaraya,GianPaolo.pdf" target="_blank" className=" border-full border p-2 border-black w-auto inline-block rounded-full">
+            <span className="animate-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
             </span>
           </Link>
