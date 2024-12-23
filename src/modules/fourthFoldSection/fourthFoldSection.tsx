@@ -1,5 +1,4 @@
 import GradientBackground from "@/components/gradientBackground"
-import PulsatingArrows from "@/components/pulsatingArrow"
 import { cn } from "@/utils/classMerge"
 import Image from "next/image"
 import Link from "next/link"
@@ -11,9 +10,11 @@ interface FourthFoldSectionSectionProps {
 
 const FourthFoldSection: React.FC<FourthFoldSectionSectionProps> = ({ className }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRefFour = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const sectionElement = sectionRefFour.current; // Capture the current ref value
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -21,19 +22,19 @@ const FourthFoldSection: React.FC<FourthFoldSectionSectionProps> = ({ className 
       { threshold: 0.5 } // Trigger when 50% of the section is visible
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (sectionElement) {
+      observer.observe(sectionElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionElement) {
+        observer.unobserve(sectionElement); // Use the captured ref value in cleanup
       }
     };
-  }, []);
+  }, [])
 
   return (
-    <div className={cn(`section secondFoldSection ${className}`)} id="thirdFoldSectionWrapper" ref={sectionRef}>
+    <div className={cn(`section secondFoldSection ${className}`)} id="thirdFoldSectionWrapper" ref={sectionRefFour}>
       <GradientBackground
         className="px-6 lg:px-10 relative"
         colorOne="#232E30"

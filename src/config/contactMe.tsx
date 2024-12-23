@@ -1,4 +1,4 @@
-import Icons, { 
+import { 
   IconMessenger,
   IconEmail,
   IconLinkedIn,

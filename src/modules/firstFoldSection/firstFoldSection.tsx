@@ -10,9 +10,11 @@ interface FirstFoldSectionProps {
 
 const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRefOne = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const sectionElement = sectionRefOne.current; // Capture the current ref value
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -20,18 +22,19 @@ const FirstFoldSection: React.FC<FirstFoldSectionProps> = ({ className }) => {
       { threshold: 0.5 } // Trigger when 50% of the section is visible
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (sectionElement) {
+      observer.observe(sectionElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionElement) {
+        observer.unobserve(sectionElement); // Use the captured ref value in cleanup
       }
     };
-  }, []);
+  }, [])
+
   return (
-    <div className={cn(`section relative firstFoldSection ${className}`)} ref={sectionRef}>
+    <div className={cn(`section relative firstFoldSection ${className}`)} ref={sectionRefOne}>
       <GradientBackground
         className="px-6 lg:px-10 relative"
         colorOne="#232E30"
