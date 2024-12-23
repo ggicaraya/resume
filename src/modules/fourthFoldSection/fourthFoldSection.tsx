@@ -106,7 +106,7 @@ const FourthFoldSection: React.FC<FourthFoldSectionSectionProps> = ({ className 
                 Visit my personal website for more about my passions, side projects, and the stories behind my work.
               </div>
               <div className="flex justify-center w-full md:justify-start">
-                <Link href="#" className="flex flex-row justify-center md:justify-end items-center transition-all bg-white py-3 pl-4 md:hover:pl-10 pr-4 text-slate-800 text-sm gap-3 font-bold">
+                <Link href="https://portfolio-seven-wheat-50.vercel.app/" target="_blank" className="flex flex-row justify-center md:justify-end items-center transition-all bg-white py-3 pl-4 md:hover:pl-10 pr-4 text-slate-800 text-sm gap-3 font-bold">
                   <span>Know more about me</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-3 w-3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
